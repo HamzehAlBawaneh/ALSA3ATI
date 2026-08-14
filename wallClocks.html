@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALSA'ATI | Vintage Watches</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="watches.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="images/jpg" href="images/ALSA3ATI logo.png">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="./images/ALSA3ATI logo.png" alt="ALSA3ATI Logo">
+                <h1>ALSA'ATI</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="watches.html">Watches</a></li>
+                    <li><a href="wallClocks.html" class="active">Wall Clocks</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cartToggle">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="products-section container">
+            <h2>Watches Collection</h2>
+            <section class="filters-section container">
+                <div class="filter-group">
+                    <input type="text" id="searchInput" placeholder="Search watches...">
+
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Watches">Wrist Watches</option>
+                        <option value="Wall Clocks">Wall Clocks</option>
+                    </select>
+
+                    <select id="brandFilter">
+                        <option value="all">All Brands</option>
+                        <option value="Rolex">Rolex</option>
+                        <option value="Omega">Omega</option>
+                        <option value="Cartier">Cartier</option>
+
+                    </select>
+
+                    <div class="price-range">
+                        <label>Max Price: $<span id="priceValue">8,000</span></label>
+                        <input type="range" id="priceFilter" min="0" max="8000" step="50" value="8000">
+                    </div>
+                    <button type="submit" id="searchSubmit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </section>
+
+            <div class="products-grid" id="productsGrid">
+                <div class="card" data-category="Wall Clocks">
+                    <img src="./images/rolex.jpg" alt="Rolex Wall Clock" class="card__image" />
+
+                    <div class="card__content">
+                        <p class="card__title">Rolex‑Style Luxury Wall Clock | 2,500$</p>
+                        <p class="card__description">
+                            A luxury clock inspired by iconic Rolex watch designs — such as Submariner or GMT Master
+                            aesthetics — making a bold statement on any living room or office wall.
+                        </p>
+                        <button class="buy-btn add-to-cart" data-id="wall1" data-name="Rolex Style Luxury Wall Clock "
+                            data-price="2500" data-image="./images/rolex.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-category="Wall Clocks">
+                    <img src="./images/omg.jpg" alt="Omega Wall Clock" class="card__image" />
+
+                    <div class="card__content">
+                        <p class="card__title">Omega Wall Clock | 5,500$</p>
+                        <p class="card__description">
+                            Clocks styled after Omega watches combine clean Swiss‑inspired design with precise
+                            quartz movement — perfect for minimalist yet elegant interiors.
+                        </p>
+                        <button class="buy-btn add-to-cart" data-id="wall2" data-name="Omega Wall Clock"
+                            data-price="5500" data-image="./images/omg.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-category="Wall Clocks">
+                    <img src="./images/cartier.jpg" alt="Cartier Wall Clock" class="card__image" />
+
+                    <div class="card__content">
+                        <p class="card__title">Cartier Mystery Clocks | 6,000$</p>
+                        <p class="card__description">
+                            Cartier clocks are luxury timepieces famous for elegant design and innovative
+                            craftsmanship. Their mystery clocks create the illusion of floating hands, making them
+                            rare, artistic, and highly valuable.
+                        </p>
+                        <button class="buy-btn add-to-cart" data-id="wall3" data-name="Cartier Mystery Clocks"
+                            data-price="6000" 
+                            data-image="/images/cartier.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-category="Wall Clocks">
+                    <img src="./images/omegawall.jpg" alt="Omega Speedmaster Wall Clock" class="card__image" />
+
+                    <div class="card__content">
+                        <p class="card__title">Omega Speedmaster (Moonwatch style wall clock) | 7,500$</p>
+                        <p class="card__description">
+                            The Omega Speedmaster wall clock represents space history and precision timing, while
+                            the Rolex Submariner wall clock symbolizes luxury and professional diving design.
+                        </p>
+                        <button class="buy-btn add-to-cart" data-id="wall4"
+                            data-name="Omega Speedmaster (Moonwatch style wall clock)" data-price="7500"
+                            data-image="./images/omegawall.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-category="Wall Clocks">
+                    <img src="./images/rolex2.jpg" alt="Rolex Submariner Wall Clock" class="card__image" />
+
+                    <div class="card__content">
+                        <p class="card__title">Rolex Submariner (wall clock) | 3,200$</p>
+                        <p class="card__description">
+                            The second wall clock is based on the Rolex Submariner, a legendary diving watch. It
+                            features a green dial, bold hour markers, and a rotating bezel, symbolizing luxury,
+                            durability, and professional underwater use.
+                        </p>
+                        <button class="buy-btn add-to-cart" data-id="wall5" data-name="Rolex Submariner (wall clock)"
+                            data-price="3200" data-image="./images/rolex2.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-category="Wall Clocks">
+                    <img src="./images/rolex3.jpg" alt="Rolex Submariner Wall Clock" class="card__image" />
+
+                    <div class="card__content">
+                        <p class="card__title">Rolex Submariner wall clock | 3,200$</p>
+                        <p class="card__description">
+                            This wall clock is inspired by the Rolex Submariner diving watch, known for its bold
+                            markers and rotating bezel, symbolizing luxury, durability, and professional dive watch
+                            design.
+                        </p>
+                        <button class="buy-btn add-to-cart" data-id="wall6" data-name="Modern Pendulum Wall Clock"
+                            data-price="3200" data-image="./images/rolex3.jpg">
+                            Add to Cart
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-total">
+            <p>Total: $<span id="cartTotal">0.00</span></p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About ALSA3ATI</h3>
+                    <p>Curated with passion in Jordan. We bring you a timeless collection of vintage watches and classic
+                        wall clocks that define elegance and tradition.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Collections</h3>
+                    <ul>
+                        <li><a href="watches.html">Watches</a></li>
+                        <li><a href="wallClocks.html">Wall Clocks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contact@alsa3ati.com</p>
+                    <p><i class="fas fa-phone"></i>0788151152</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Amman, Jordan</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates and promotions</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 ALSA3ATI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
